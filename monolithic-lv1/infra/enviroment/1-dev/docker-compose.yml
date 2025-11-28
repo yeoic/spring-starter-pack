@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: spring-starter-monolithic-lv1-dev-db
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin1234
+      TZ: Asia/Seoul
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
