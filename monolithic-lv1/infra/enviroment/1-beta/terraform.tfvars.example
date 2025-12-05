@@ -1,0 +1,31 @@
+# AWS Configuration
+aws_region = "ap-northeast-2"
+environment = "1-beta"
+project_name = "spring-starter-pack"
+
+# Network Configuration
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_cidr   = "10.0.1.0/24"
+private_subnet_cidr  = "10.0.2.0/24"
+availability_zone    = "ap-northeast-2a"
+
+# NAT Instance Configuration
+nat_ami           = "ami-0c9c942bd7bf113a2"  # Amazon Linux 2 in ap-northeast-2
+nat_instance_type = "t3.micro"
+nat_spot_price    = "0.01"
+
+# Application EC2 Configuration
+app_ami           = "ami-0c9c942bd7bf113a2"  # Update with your preferred AMI
+app_instance_type = "t3.medium"
+app_spot_price    = "0.05"
+app_volume_size   = 30
+key_name          = "your-key-pair-name"  # Update with your key pair name
+
+# RDS Configuration
+db_engine_version       = "15.4"
+db_instance_class       = "db.t3.micro"
+db_allocated_storage    = 20
+db_max_allocated_storage = 100
+db_name                 = "appdb"
+db_username             = "postgres"
+db_password             = "change-me-to-secure-password"  # Change this!
